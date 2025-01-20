@@ -1,6 +1,6 @@
 import React, { useState} from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaShoppingCart, FaEnvelope } from 'react-icons/fa';
+import { FaShoppingCart, FaEnvelope, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +23,17 @@ const Header = () => {
     setIsFormVisible(false);
   };
 
+  const handleSmoothScroll = (event, targetId) => {
+    event.preventDefault(); 
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-    <div className='sticky top-0 bg-white  flex items-center justify-between px-4 py-2'>
+    <div className='sticky top-0 bg-white flex items-center justify-between px-4 py-2 shadow-lg'>
        <div className='flex items-center space-x-2'>
         <img 
         src='https://files.cdn-files-a.com/uploads/9376397/400_filter_nobg_668fb89eb8b6a.png'
@@ -35,15 +43,16 @@ const Header = () => {
         <span className='text-xl'>COCO Extensions</span>
        </div>
        <div>
-        <ul  className='flex space-x-4 '>
+        <ul  className='flex space-x-1 '>
        
             <li>
                 <NavLink  
                 to='/'
                 className={({isActive}) => 
-                    isActive ? "border border-[#d0ae81] font-semibold rounded-2xl text-[#d0ae81] text-lg px-2 py-1" :
-                 "text-black text-lg p-1 font-semibold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-2xl"
+                    isActive ? "border border-[#d0ae81] font-bold rounded-xl text-[#d0ae81] text-md px-2 py-1" :
+                 "text-black text-lg py-1 px-2 font-bold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-xl"
                 }
+                onClick={(e) => handleSmoothScroll(e, "home")}
                 >
                  Home
                 </NavLink>
@@ -51,9 +60,10 @@ const Header = () => {
             <li>  
                 <NavLink to='/about'
                 className={({isActive}) => 
-                    isActive ? "border border-[#d0ae81] font-semibold rounded-2xl text-[#d0ae81] text-lg px-2 py-1" :
-                 "text-black text-lg p-1 font-semibold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-2xl"
+                    isActive ? "border border-[#d0ae81] font-bold rounded-xl text-[#d0ae81] text-md px-2 py-1" :
+                 "text-black text-lg p-1 px-2 font-bold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-xl"
                 }
+                onClick={(e) => handleSmoothScroll(e, "about")}
                 >
                  About
                 </NavLink>
@@ -61,9 +71,10 @@ const Header = () => {
             <li>
                 <NavLink to='/categories'
                 className={({isActive}) => 
-                    isActive ? "border border-[#d0ae81] font-semibold rounded-2xl text-[#d0ae81] text-lg px-2 py-1" :
-                 "text-black text-lg p-1 font-semibold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-2xl"
+                    isActive ? "border border-[#d0ae81] font-bold rounded-xl text-[#d0ae81] text-md px-2 py-1" :
+                 "text-black text-lg p-1 px-2 font-bold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-xl"
                 }
+                onClick={(e) => handleSmoothScroll(e, "categories")}
                 >
                 Store
                 </NavLink>
@@ -71,9 +82,10 @@ const Header = () => {
             <li>
                 <NavLink to='/services'
                 className={({isActive}) => 
-                    isActive ? "border border-[#d0ae81] font-semibold rounded-2xl text-[#d0ae81] text-lg px-2 py-1" :
-                 "text-black text-lg p-1 font-semibold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-2xl"
+                    isActive ? "border border-[#d0ae81] font-bold rounded-xl text-[#d0ae81] text-md px-2 py-1" :
+                 "text-black text-lg p-1 px-2 font-bold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-xl"
                 }
+                onClick={(e) => handleSmoothScroll(e, "services")}
                 >
                 Services
                 </NavLink>
@@ -81,9 +93,10 @@ const Header = () => {
             <li>
                 <NavLink to='/testimonials'
                 className={({isActive}) => 
-                    isActive ? "border border-[#d0ae81] font-semibold rounded-2xl text-[#d0ae81] text-lg px-2 py-1" :
-                 "text-black text-lg p-1 font-semibold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-2xl"
+                    isActive ? "border border-[#d0ae81] font-bold rounded-xl text-[#d0ae81] text-md px-2 py-1" :
+                 "text-black text-lg p-1 px-2 font-bold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-xl"
                 }
+                onClick={(e) => handleSmoothScroll(e, "testimonials")}
                 >
                 Testimonials
                 </NavLink>
@@ -91,9 +104,10 @@ const Header = () => {
             <li>
                 <NavLink to='/contact'
                 className={({isActive}) => 
-                   isActive ? "border border-[#d0ae81] font-semibold rounded-2xl text-[#d0ae81] text-lg px-2 py-1" :
-                 "text-black text-lg p-1 font-semibold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-2xl"
+                   isActive ? "border border-[#d0ae81] font-bold rounded-xl text-[#d0ae81] text-md px-2 py-1" :
+                 "text-black text-lg p-1 px-2 font-bold hover:text-[#d0ae81] hover:border border-[#d0ae81] hover: rounded-xl"
                 }
+                onClick={(e) => handleSmoothScroll(e, "contact")}
                 >
                 Contact
                 </NavLink>
@@ -101,18 +115,18 @@ const Header = () => {
                 <li>
               <button
                 onClick={openNav}
-                className="text-black text-lg pb-0 font-semibold hover:text-[#d0ae81]"
+                className="text-black px-2 pt-2 font-semibold hover:text-[#d0ae81]"
               >
-                <FaShoppingCart size={24} />
+                <FaShoppingCart size={16} />
               </button>
             </li>
             {/* Contact Form */}
             <li>
               <button
                 onClick={openForm}
-                className="text-black text-lg pb-0 font-semibold hover:text-[#d0ae81]"
+                className="text-black px-2 pt-2 font-semibold hover:text-[#d0ae81]"
               >
-                <FaEnvelope size={24} />
+                <FaEnvelope size={16} />
               </button>
             </li>  
             </ul>
@@ -123,7 +137,7 @@ const Header = () => {
           >
          <div className="flex justify-between text-center bg-[#d0ae81] h-30 p-10  text-black">
          <h2 className='text-2xl'>Your Cart</h2>
-         <button  className="text-3xl font-semibold" onClick={closeNav}>&times;</button>
+         <button  className="font-semibold" onClick={closeNav}><FaTimes size={20}/></button>
          </div>
          <p className='pt-10 pb-5 text-center text-gray-500'>Your shopping cart is empty</p>
          <button className='text-[#d0ae81] bg-white text-center mx-4 px-28 py-3 border border-[#d0ae81] rounded-xl hover:text-black hover:border-black' >Continue Shopping</button>
@@ -138,7 +152,7 @@ const Header = () => {
     className="absolute top-4 right-8 text-4xl font-semibold"
     onClick={closeForm}
   >
-    &times;
+    <FaTimes size={32}/>
   </button>
   <div className={`p-24 ${isFormVisible ? 'block' : 'hidden'}`}>
     <h1 className="text-center text-2xl text-white font-bold">Contact Us</h1>

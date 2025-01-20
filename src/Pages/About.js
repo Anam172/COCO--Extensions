@@ -15,7 +15,7 @@ const About = () => {
           About Us
         </h2>
         <hr className="absolute border-t-4 border-[#d0ae81] w-[5%] mx-auto md:mx-0 mt-4" />
-        <p className="text-lg text-black md:w-[80%] font-semibold mt-6 pt-4">
+        <p className="text-lg text-black md:w-[80%] font-medium mt-6 pt-4">
           At Coco Extensions, we believe in enhancing the natural beauty of our
           clients with the finest quality hair extensions. Our team is dedicated
           to providing a seamless blend and a perfect match, ensuring you look

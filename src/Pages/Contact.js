@@ -15,12 +15,12 @@ const Contact = () => {
                 <p className="text-md">+44-7512307397</p>
             </div>
             
-            <div className="flex items-center space-x-2 mt-2 text-[#d0ae81]">
+            <div className="flex items-center space-x-2 text-[#d0ae81]">
                 <FaEnvelope />
                 <p className="text-md">bethdonaldson6mw@gmail.com</p>
             </div>
 
-            <div className="flex items-center space-x-2 mt-2 text-[#d0ae81]">
+            <div className="flex items-center space-x-2  text-[#d0ae81]">
                 <FaClock />
                 <p className="text-md font-normal text-black">Mon-Fri - 08:00-19:00</p>
             </div>

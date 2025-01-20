@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
     const cardData = [
@@ -7,24 +8,28 @@ const Categories = () => {
             title: "CLIP INS",
             products: "1 PRODUCTS",
             image: "https://files.cdn-files-a.com/uploads/9376397/800_gi-668eb9f864da6.jpg",
+             link: "clipIns",
         },
         {
             id: 2,
             title: "WIGS",
             products: "1 PRODUCTS",
             image: "https://files.cdn-files-a.com/uploads/9376397/800_gi-668eba25b3db5.jpg",
+            link: "wigs",
         },
         {
             id: 3,
             title: "TAPES",
             products: "1 PRODUCTS",
             image: "https://files.cdn-files-a.com/uploads/9376397/800_gi-668eba7ee41a9.jpg",
+             link: "tapes",
         },
         {
             id: 4,
             title: "WEFTS",
             products: "1 PRODUCTS",
             image: "https://files.cdn-files-a.com/uploads/9376397/800_gi-668eba935fad5.jpg",
+            link: "wefts",
         },
     ];
   return (
@@ -42,9 +47,11 @@ const Categories = () => {
             }}
             >
             <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
-                <div className="relative z-10 text-center">
-                <h2 className="text-white text-3xl font-bold pt-20">{Categories.title}</h2>
-                <h3 className="text-white text-sm mt-2">{Categories.products}</h3>
+                <div className="relative z-10 text-center pt-24">
+                <Link to={Categories.link} className="text-white text-3xl font-bold">
+                    {Categories.title}
+                </Link>
+                <h3 className="text-white text-xs my-2">{Categories.products}</h3>
                 </div>
             </div>
           ))}
@@ -52,8 +59,8 @@ const Categories = () => {
     </div>
     <div className='flex bg-[#f2ece4]'>
        <div>
-        <img src="https://files.cdn-files-a.com/uploads/9376397/2000_668ebc11be3f1_filter_668ebc7e54ced.png"
-         alt='img' style={{height: "700px"}}/>
+        <img className='w-[65vw]' src="https://files.cdn-files-a.com/uploads/9376397/2000_668ebc11be3f1_filter_668ebc7e54ced.png"
+         alt='img' style={{height: "650px"}}/>
        </div>
        <div className='text-left justify-between m-auto'>
          <h1 className='pb-6 text-3xl py-4 md:text-6xl font-bold '>Discover Your<br /> New Look</h1>
