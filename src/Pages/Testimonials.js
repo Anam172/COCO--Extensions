@@ -18,7 +18,7 @@ const Testimonials = () => {
     <div id='testimonials' className='bg-[#f2ece4] p-8'>
         <h1 className='relative text-center text-3xl font-semibold'>Testimonials</h1>
         <hr className="border-t-4 border-[#d0ae81] w-[15%] mx-auto md: mt-4" />
-        <div className='flex justify-center gap-8 p-4 mx-16'>
+        <div className='flex flex-col lg:flex-row justify-center gap-8 p-4 lg:mx-16'>
           {cards.map((Testimonials) => (
            <div
            key = {Testimonials.id}

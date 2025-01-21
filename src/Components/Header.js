@@ -31,6 +31,7 @@ const Header = () => {
     }
   };
 
+
   return (
     <>
     <div className='sticky top-0 bg-white flex items-center justify-between px-4 py-2 shadow-lg'>
@@ -43,7 +44,7 @@ const Header = () => {
         <span className='text-xl'>COCO Extensions</span>
        </div>
        <div>
-        <ul  className='flex space-x-1 '>
+        <ul  className='flex lg:space-x-1'>
        
             <li>
                 <NavLink  

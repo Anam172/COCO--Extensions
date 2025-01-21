@@ -6,7 +6,7 @@ const Contact = () => {
     <div id='contact' className='text-center p-20 bg-[#f2ece4]'>
        <h1 className='relative text-center text-3xl'>Contact Us</h1>
        <hr className="border-t-4 border-[#d0ae81] w-[10%] mx-auto md: mt-4" /> 
-       <div className='flex gap:4 justify-around m-4'>
+       <div className='flex flex-col lg:flex-row  gap:4 justify-around m-4'>
        <div className='justify-items-center float-end'>
             <p className="text-md font-normal pb-4 mt-12">United Kingdom</p>
             
@@ -25,18 +25,18 @@ const Contact = () => {
                 <p className="text-md font-normal text-black">Mon-Fri - 08:00-19:00</p>
             </div>
         </div>
-      <div className=" p-8 max-w-xl">
+      <div className="lg:p-8 max-w-xl py-4 ">
       <form className="space-y-6">
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row sm:flex-column gap-4">
           <input
             type="text"
             placeholder="Name"
-            className="w-full md:w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#d0ae81]"
+            className="w-full md:w-1/2 sm:px-2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#d0ae81]"
           required />
           <input
             type="text"
             placeholder="Phone"
-            className="w-full md:w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#d0ae81]"
+            className="w-full md:w-1/2 sm:px-2  px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#d0ae81]"
           />
         </div>
         <input

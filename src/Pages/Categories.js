@@ -57,12 +57,12 @@ const Categories = () => {
           ))}
        </div>
     </div>
-    <div className='flex bg-[#f2ece4]'>
+    <div className='flex flex-col lg:flex-row bg-[#f2ece4]'>
        <div>
-        <img className='w-[65vw]' src="https://files.cdn-files-a.com/uploads/9376397/2000_668ebc11be3f1_filter_668ebc7e54ced.png"
-         alt='img' style={{height: "650px"}}/>
+        <img className='lg:w-[67vw]' src="https://files.cdn-files-a.com/uploads/9376397/2000_668ebc11be3f1_filter_668ebc7e54ced.png"
+         alt='img' style={{height: "700px"}}/>
        </div>
-       <div className='text-left justify-between m-auto'>
+       <div className='text-left py-4 justify-between m-auto lg:p-0'>
          <h1 className='pb-6 text-3xl py-4 md:text-6xl font-bold '>Discover Your<br /> New Look</h1>
          <hr className=" border-t-8 border-[#d0ae81] w-[30%] mx-auto md:mx-0 mt-4" />
          <p className='pt-4 text-2xl text-semibold'>Transform Your Hair,</p>

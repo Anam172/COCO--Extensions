@@ -27,7 +27,7 @@ const Services = () => {
     <div id='services' className='p-20 justify-center bg-[#f4f4f4]'>
     <h1 className='relative text-center text-3xl'>Services</h1>
     <hr className="border-t-4 border-[#d0ae81] w-[10%] mx-auto md: mt-4" />
-    <div className='flex flex-row gap-4 justify-center px-52 mt-8'>
+    <div className='flex flex-col lg:flex-row gap-4 justify-center lg:px-52 mt-8'>
       {serviceCard.map((Services, index) => (
         <div
           key = {Services.id}

@@ -8,9 +8,9 @@ import Contact from './Contact'
 const Home = () => {
   return (
     <>
-    <div id='home' className='flex flex-col md:flex-row items-center justify-between bg-[#f4f4f4]' >
-       <div className='md:w-1/2 text-center px-20 md:text-left justify-center Leading-loose'>
-         <h1 className='text-3xl text-black font-bold p-4 leading-loose md:text-6xl'>
+    <div id='home' className='flex flex-col lg:flex-row items-center justify-between bg-[#f4f4f4]' >
+       <div className='lg:w-1/2 text-center px-20 md:text-left justify-center Leading-loose'>
+         <h1 className='text-3xl text-black font-bold p-4 lg:text-6xl'>
             <span className='text-[#d0ae81]'>COCO</span><br />
              SHADES<br /> EXTENSIONS
          </h1>
